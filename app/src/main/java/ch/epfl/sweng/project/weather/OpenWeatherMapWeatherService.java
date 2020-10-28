@@ -1,16 +1,9 @@
 package ch.epfl.sweng.project.weather;
 
-import android.content.Context;
 import android.os.StrictMode;
 import android.util.Log;
-
-import androidx.annotation.NonNull;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.json.JSONTokener;
-
+import ch.epfl.sweng.project.location.Location;
+import ch.epfl.sweng.project.weather.WeatherModule.ApiKey;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -18,12 +11,15 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.stream.Collectors;
-
+import javax.inject.Inject;
+import javax.inject.Singleton;
 import javax.net.ssl.HttpsURLConnection;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.json.JSONTokener;
 
-import ch.epfl.sweng.project.R;
-import ch.epfl.sweng.project.location.Location;
-
+@Singleton
 public class OpenWeatherMapWeatherService implements WeatherService {
     private static final String API_ENDPOINT = "https://api.openweathermap.org/data/2.5/onecall";
     private static final String TEMP_UNIT = "metric";
@@ -31,20 +27,12 @@ public class OpenWeatherMapWeatherService implements WeatherService {
 
     private final String apiKey;
 
-    OpenWeatherMapWeatherService(String apiKey) {
+    @Inject
+    OpenWeatherMapWeatherService(@ApiKey String apiKey) {
         // Disable StrictMode to allow Synchronous network calls
         StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitNetwork().build());
 
         this.apiKey = apiKey;
-    }
-
-    public static WeatherService buildFromContext(@NonNull Context context) {
-        String key = context.getString(R.string.openweather_api_key);
-        return new OpenWeatherMapWeatherService(key);
-    }
-
-    public static WeatherService buildFromApiKey(String apiKey) {
-        return new OpenWeatherMapWeatherService(apiKey);
     }
 
     private WeatherReport parseReport(JSONObject report) throws JSONException {

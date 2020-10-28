@@ -1,0 +1,84 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="ch.epfl.sweng.project"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->/Users/tom/Desktop/SWENG/SwengProject/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->/Users/tom/Desktop/SWENG/SwengProject/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+11-->/Users/tom/Desktop/SWENG/SwengProject/app/src/main/AndroidManifest.xml:5:5-81
+11-->/Users/tom/Desktop/SWENG/SwengProject/app/src/main/AndroidManifest.xml:5:22-78
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/Users/tom/Desktop/SWENG/SwengProject/app/src/main/AndroidManifest.xml:6:5-67
+12-->/Users/tom/Desktop/SWENG/SwengProject/app/src/main/AndroidManifest.xml:6:22-64
+13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+14    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+15    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+16<!--       usesCleartextTraffic is set to true to enable Picasso to download images from HTTP urls. -->
+17    <application
+17-->/Users/tom/Desktop/SWENG/SwengProject/app/src/main/AndroidManifest.xml:11:5-36:19
+18        android:name="ch.epfl.sweng.project.SwengApplication"
+18-->/Users/tom/Desktop/SWENG/SwengProject/app/src/main/AndroidManifest.xml:12:9-41
+19        android:allowBackup="true"
+19-->/Users/tom/Desktop/SWENG/SwengProject/app/src/main/AndroidManifest.xml:13:9-35
+20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+20-->[androidx.core:core:1.3.1] /Users/tom/.gradle/caches/transforms-2/files-2.1/2ad5bd96bbf44d7af77bb5f451408db8/core-1.3.1/AndroidManifest.xml:24:18-86
+21        android:debuggable="true"
+22        android:extractNativeLibs="false"
+23        android:icon="@mipmap/ic_launcher"
+23-->/Users/tom/Desktop/SWENG/SwengProject/app/src/main/AndroidManifest.xml:14:9-43
+24        android:label="@string/app_name"
+24-->/Users/tom/Desktop/SWENG/SwengProject/app/src/main/AndroidManifest.xml:15:9-41
+25        android:roundIcon="@mipmap/ic_launcher_round"
+25-->/Users/tom/Desktop/SWENG/SwengProject/app/src/main/AndroidManifest.xml:16:9-54
+26        android:supportsRtl="true"
+26-->/Users/tom/Desktop/SWENG/SwengProject/app/src/main/AndroidManifest.xml:17:9-35
+27        android:testOnly="true"
+28        android:theme="@style/AppTheme"
+28-->/Users/tom/Desktop/SWENG/SwengProject/app/src/main/AndroidManifest.xml:18:9-40
+29        android:usesCleartextTraffic="true" >
+29-->/Users/tom/Desktop/SWENG/SwengProject/app/src/main/AndroidManifest.xml:19:9-44
+30        <activity android:name="ch.epfl.sweng.project.WeatherActivity" />
+30-->/Users/tom/Desktop/SWENG/SwengProject/app/src/main/AndroidManifest.xml:20:9-62
+30-->/Users/tom/Desktop/SWENG/SwengProject/app/src/main/AndroidManifest.xml:20:19-50
+31        <!--
+32         Bonus: Set the parent activity so that the user can go back
+33         to the previous main activity from the greeting activity
+34        -->
+35        <activity
+35-->/Users/tom/Desktop/SWENG/SwengProject/app/src/main/AndroidManifest.xml:25:9-27:67
+36            android:name="ch.epfl.sweng.project.GreetingActivity"
+36-->/Users/tom/Desktop/SWENG/SwengProject/app/src/main/AndroidManifest.xml:26:13-45
+37            android:parentActivityName="ch.epfl.sweng.project.MainActivity" />
+37-->/Users/tom/Desktop/SWENG/SwengProject/app/src/main/AndroidManifest.xml:27:13-55
+38        <activity android:name="ch.epfl.sweng.project.MainActivity" >
+38-->/Users/tom/Desktop/SWENG/SwengProject/app/src/main/AndroidManifest.xml:28:9-34:20
+38-->/Users/tom/Desktop/SWENG/SwengProject/app/src/main/AndroidManifest.xml:28:19-47
+39            <intent-filter>
+39-->/Users/tom/Desktop/SWENG/SwengProject/app/src/main/AndroidManifest.xml:29:13-33:29
+40                <action android:name="android.intent.action.MAIN" />
+40-->/Users/tom/Desktop/SWENG/SwengProject/app/src/main/AndroidManifest.xml:30:17-69
+40-->/Users/tom/Desktop/SWENG/SwengProject/app/src/main/AndroidManifest.xml:30:25-66
+41
+42                <category android:name="android.intent.category.LAUNCHER" />
+42-->/Users/tom/Desktop/SWENG/SwengProject/app/src/main/AndroidManifest.xml:32:17-77
+42-->/Users/tom/Desktop/SWENG/SwengProject/app/src/main/AndroidManifest.xml:32:27-74
+43            </intent-filter>
+44        </activity>
+45
+46        <provider
+46-->[com.squareup.picasso:picasso:2.8] /Users/tom/.gradle/caches/transforms-2/files-2.1/9b16f809ee1e2577769012a2a14298d2/jetified-picasso-2.8/AndroidManifest.xml:8:9-11:40
+47            android:name="com.squareup.picasso.PicassoProvider"
+47-->[com.squareup.picasso:picasso:2.8] /Users/tom/.gradle/caches/transforms-2/files-2.1/9b16f809ee1e2577769012a2a14298d2/jetified-picasso-2.8/AndroidManifest.xml:9:13-64
+48            android:authorities="ch.epfl.sweng.project.com.squareup.picasso"
+48-->[com.squareup.picasso:picasso:2.8] /Users/tom/.gradle/caches/transforms-2/files-2.1/9b16f809ee1e2577769012a2a14298d2/jetified-picasso-2.8/AndroidManifest.xml:10:13-72
+49            android:exported="false" />
+49-->[com.squareup.picasso:picasso:2.8] /Users/tom/.gradle/caches/transforms-2/files-2.1/9b16f809ee1e2577769012a2a14298d2/jetified-picasso-2.8/AndroidManifest.xml:11:13-37
+50    </application>
+51
+52</manifest>

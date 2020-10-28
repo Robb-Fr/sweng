@@ -1,25 +1,21 @@
 package ch.epfl.sweng.project.geocoding;
 
-import android.content.Context;
 import android.location.Geocoder;
-
 import androidx.annotation.NonNull;
-
+import ch.epfl.sweng.project.location.Location;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import javax.inject.Inject;
+import javax.inject.Singleton;
 
-import ch.epfl.sweng.project.location.Location;
-
+@Singleton
 public class AndroidGeocodingService implements GeocodingService {
     private final Geocoder geocoder;
 
+    @Inject
     AndroidGeocodingService(Geocoder geocoder) {
         this.geocoder = geocoder;
-    }
-
-    public static final GeocodingService fromContext(Context context) {
-        return new AndroidGeocodingService(new Geocoder(context));
     }
 
     @Override

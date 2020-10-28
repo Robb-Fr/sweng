@@ -19,7 +19,7 @@ public final class WeatherForecast {
      *                reports[1] must be tomorrow's report
      *                reports[2] must be the report of the day after tomorrow
      */
-    WeatherForecast(WeatherReport[] reports) {
+    public WeatherForecast(WeatherReport[] reports) {
         if (reports.length < 3) {
             throw new IllegalArgumentException("reports array must contain at least 3 elements.");
         }

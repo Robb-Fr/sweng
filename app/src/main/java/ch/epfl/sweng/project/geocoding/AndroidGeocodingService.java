@@ -1,13 +1,17 @@
 package ch.epfl.sweng.project.geocoding;
 
 import android.location.Geocoder;
+
 import androidx.annotation.NonNull;
-import ch.epfl.sweng.project.location.Location;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.inject.Inject;
 import javax.inject.Singleton;
+
+import ch.epfl.sweng.project.location.Location;
 
 @Singleton
 public class AndroidGeocodingService implements GeocodingService {

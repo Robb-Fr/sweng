@@ -2,6 +2,7 @@ package ch.epfl.sweng.project.geocoding;
 
 import android.content.Context;
 import android.location.Geocoder;
+
 import dagger.Binds;
 import dagger.Module;
 import dagger.Provides;

@@ -18,7 +18,6 @@ public interface GeocodingService {
      *
      * @param address the address, i.e. Lausanne, Switzerland
      * @return the location for this address
-     *
      * @throws IOException if the network is unavailable
      */
     Location getLocation(@NonNull String address) throws IOException;
@@ -28,7 +27,6 @@ public interface GeocodingService {
      *
      * @param location the location for which you want an address
      * @return the address of this location
-     *
      * @throws IOException if the network is unavailable
      */
     Address getAddress(@NonNull Location location) throws IOException;

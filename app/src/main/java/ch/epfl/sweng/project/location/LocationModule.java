@@ -3,17 +3,20 @@ package ch.epfl.sweng.project.location;
 import android.content.Context;
 import android.location.Criteria;
 import android.location.LocationManager;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+import javax.annotation.Nullable;
+import javax.inject.Qualifier;
+import javax.inject.Singleton;
+
 import dagger.Binds;
 import dagger.Module;
 import dagger.Provides;
 import dagger.hilt.InstallIn;
 import dagger.hilt.android.components.ApplicationComponent;
 import dagger.hilt.android.qualifiers.ApplicationContext;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import javax.inject.Qualifier;
-import javax.inject.Singleton;
-import javax.annotation.Nullable;
 
 @Module
 @InstallIn(ApplicationComponent.class)
@@ -21,7 +24,8 @@ public abstract class LocationModule {
 
     @Qualifier
     @Retention(RetentionPolicy.RUNTIME)
-    @interface LocationProvider {}
+    @interface LocationProvider {
+    }
 
     @Binds
     public abstract LocationService bindLocationService(AndroidLocationService locationServiceImpl);

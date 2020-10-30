@@ -12,20 +12,25 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+
+import com.google.android.material.tabs.TabLayout;
+import com.squareup.picasso.Picasso;
+
+import java.io.IOException;
+
+import javax.inject.Inject;
+
 import ch.epfl.sweng.project.geocoding.GeocodingService;
 import ch.epfl.sweng.project.location.Location;
 import ch.epfl.sweng.project.location.LocationService;
 import ch.epfl.sweng.project.weather.WeatherForecast;
 import ch.epfl.sweng.project.weather.WeatherReport;
 import ch.epfl.sweng.project.weather.WeatherService;
-import com.google.android.material.tabs.TabLayout;
-import com.squareup.picasso.Picasso;
 import dagger.hilt.android.AndroidEntryPoint;
-import java.io.IOException;
-import javax.inject.Inject;
 
 @AndroidEntryPoint
 public class WeatherActivity extends AppCompatActivity {
@@ -172,7 +177,7 @@ public class WeatherActivity extends AppCompatActivity {
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
-            @NonNull int[] grantResults) {
+                                           @NonNull int[] grantResults) {
         if (requestCode == PERMISSION_REQUEST_CODE) {
             loadWeather();
             // We immediately call back the function, if the permission was not granted the prompt will be shown again

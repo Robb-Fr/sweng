@@ -8,8 +8,6 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import ch.epfl.sweng.project.weather.WeatherReport;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override

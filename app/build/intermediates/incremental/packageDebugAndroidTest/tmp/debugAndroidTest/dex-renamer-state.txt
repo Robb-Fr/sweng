@@ -1,7 +1,13 @@
-#Sat Oct 24 18:14:31 CEST 2020
-base.0=/Users/tom/Desktop/SWENG/SwengProject/app/build/intermediates/dex/debugAndroidTest/mergeExtDexDebugAndroidTest/classes.dex
+#Fri Oct 30 11:39:25 CET 2020
+path.3=classes.dex
+path.2=classes.dex
 path.1=classes.dex
-renamed.1=classes2.dex
 path.0=classes.dex
+renamed.3=classes4.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
 renamed.0=classes.dex
-base.1=/Users/tom/Desktop/SWENG/SwengProject/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/classes.dex
+base.3=/Users/tom/Desktop/SWENG/SwengProject/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/classes.dex
+base.2=/Users/tom/Desktop/SWENG/SwengProject/app/build/intermediates/dex/debugAndroidTest/mergeExtDexDebugAndroidTest/classes.dex
+base.1=/Users/tom/Desktop/SwengProject/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/classes.dex
+base.0=/Users/tom/Desktop/SwengProject/app/build/intermediates/dex/debugAndroidTest/mergeExtDexDebugAndroidTest/classes.dex

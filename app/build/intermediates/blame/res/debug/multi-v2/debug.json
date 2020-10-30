@@ -3008,10 +3008,10 @@
                     "source": "/Users/tom/Desktop/SWENG/SwengProject/app/src/main/res/values/keys.xml",
                     "from": {
                         "startLines": "1",
-                        "startColumns": "1",
-                        "startOffsets": "13",
-                        "endColumns": "77",
-                        "endOffsets": "89"
+                        "startColumns": "4",
+                        "startOffsets": "16",
+                        "endColumns": "80",
+                        "endOffsets": "92"
                     },
                     "to": {
                         "startLines": "1028",

@@ -2,10 +2,12 @@ package ch.epfl.sweng.project.location;
 
 import android.location.Criteria;
 import android.location.LocationManager;
-import ch.epfl.sweng.project.location.LocationModule.LocationProvider;
+
 import javax.annotation.Nullable;
 import javax.inject.Inject;
 import javax.inject.Singleton;
+
+import ch.epfl.sweng.project.location.LocationModule.LocationProvider;
 
 @Singleton
 public final class AndroidLocationService implements LocationService {

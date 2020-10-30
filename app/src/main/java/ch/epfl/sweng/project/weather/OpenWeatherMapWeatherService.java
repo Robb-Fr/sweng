@@ -2,8 +2,12 @@ package ch.epfl.sweng.project.weather;
 
 import android.os.StrictMode;
 import android.util.Log;
-import ch.epfl.sweng.project.location.Location;
-import ch.epfl.sweng.project.weather.WeatherModule.ApiKey;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.json.JSONTokener;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,13 +15,13 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.stream.Collectors;
+
 import javax.inject.Inject;
 import javax.inject.Singleton;
 import javax.net.ssl.HttpsURLConnection;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.json.JSONTokener;
+
+import ch.epfl.sweng.project.location.Location;
+import ch.epfl.sweng.project.weather.WeatherModule.ApiKey;
 
 @Singleton
 public class OpenWeatherMapWeatherService implements WeatherService {
